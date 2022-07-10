@@ -13,6 +13,8 @@ export class AppComponent implements OnInit {
 
   public finishedLoadingScript = false;
 
+  public env = { targetUrl: 'http://localhost:3000/', someField: 'testVal'};
+
   constructor(private http: HttpClient) {}
 
   public ngOnInit(): void {

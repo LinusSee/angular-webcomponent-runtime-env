@@ -5,6 +5,8 @@ const app = express();
 const port = 3000;
 
 
+app.use(function(req,res,next){setTimeout(next, 2000)});
+
 app.use(cors());
 
 app.use(express.static('deployments'));

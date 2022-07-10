@@ -1,1 +1,17 @@
 my-sample-webcomponent is working!
+<br>
+Env: {{environmentAsString()}}
+<hr>
+
+<p>State is: {{state}}</p>
+<div [ngSwitch]="state">
+  <!-- the same view can be shown in more than one case -->
+  <div *ngSwitchCase="'INITIAL'">Initial</div>
+  <div *ngSwitchCase="'LOADING'">Loading</div>
+  <div *ngSwitchCase="'LOADED'">
+    <app-after-env></app-after-env>
+  </div>
+  <div *ngSwitchCase="'ERROR'">Error</div>
+  <!--default case when there are no matches -->
+  <!-- <some-element *ngSwitchDefault>...</some-element> -->
+</div>
