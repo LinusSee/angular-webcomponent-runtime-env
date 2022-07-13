@@ -1,2 +1,5 @@
 <p>after-env works!</p>
-{{environment.myEnvIsLoaded}}
+<div *ngIf="person$ | async">
+  <p>Forename: {{person.forename}}</p>
+  <p>Surname: {{person.surname}}</p>
+</div>

@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
 
   public state!: EnvironmentState;
 
+
   @Input('environment')
   public parentEnvironment!: { targetUrl: string, someField: string };
 
